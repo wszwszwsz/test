@@ -1,20 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FrontController!{% endblock %}
+{% block title %}Blog®{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
 
-<div class="example-wrapper">
-    <h1>Hej! Witaj na stronie prostego blogu^^</h1>
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/User/PhpstormProjects/blog/src/Controller/FrontController.php'|file_link(0) }}">src/Controller/FrontController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/User/PhpstormProjects/blog/templates/front/index.html.twig'|file_link(0) }}">templates/front/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="example-wrapper">
+        <h1>Hej! Witaj na prostym blogu^^</h1>
+        <h2><a href="{{ path('registry') }}">Zarejestruj się</a></h2>
+        <h2><a href="{{ path('login') }}">Logowanie</a></h2>
+        <h2><a href="{{ path('write_blog') }}">Napisz se bloga</a></h2>
+    </div> <br/> <br/>
+    <div class="example-wrapper">
+        <h2>Blog - Ciężka nauka</h2>
+        Nauka jest jednym z rodzajów wiedzy ludzkiej. Pod względem poznawczym wydaje się być wiedzą najlepszą,
+        najbardziej adekwatnie opisującą rzeczywistość. Ten wysoki status poznawczy zawdzięcza nauka metodom,
+        jakie stosuje, oraz językowi, jakim się posługuje. „Ważnymi elementami «naukowości» są język i metoda.
+        Zdaniem wielu, zarówno naukowców jak i filozofów, to właśnie te dwa elementy decydują o tym, czy coś jest
+        naukowe,
+        czy nie”[1]. Prawa i teorie naukowe, stanowiące najważniejsze wyniki badań naukowych, wymagają uzasadnienia,
+        polegającego
+        na konfrontacji przewidywań na nich opartych z rezultatami doświadczenia, czyli z wynikami obserwacji,
+        pomiarów i eksperymentów.
+        „Nauka rodzi się z dążenia do uzyskania wyjaśnień systematycznych, a równocześnie podlegających kontroli w
+        oparciu o dane (...)”[2].
+        Nauka jako rzeczywistość społeczna jest tworem złożonym i wieloaspektowym.
+    </div>
+    <div class="example-wrapper">
+        <h2>Blog - Ciężkie życie</h2>
+        Życie(gr. βίος, bios) w biologii ma dwie, związane ze sobą definicje:
+        zespół procesów życiowych – swoistych, wysoko zorganizowanych funkcjonalnie (w cykle i sieci), przemian
+        fizycznych
+        i reakcji chemicznych, zachodzących w otwartych termodynamicznie, wyodrębnionych z otoczenia układach fizycznych
+        (zawierających zawsze kwasy nukleinowe i białka, według stanu współczesnej wiedzy), zbudowanych morfologicznie
+        (o hierarchicznej strukturze), składających się z jednej lub wielu komórek (organizmach, osobnikach) oraz
+        swoistych zjawisk biologicznych,
+        zachodzących z udziałem tych organizmów – istniejący na Ziemi, a być może też na innych planetach[1][2]
+        właściwość pewnych układów fizycznych (→ organizmów), w których zachodzą procesy życiowe[3][4][5].
+
+    </div>
 {% endblock %}
+    {#        <ul>#}
+    {#            <li>Your controller at <code><a#}
+    {#                            href="{{ 'C:/Users/User/PhpstormProjects/blog/src/Controller/FrontController.php'|file_link(0) }}">src/Controller/FrontController.php</a></code>#}
+    {#            </li>#}
+    {#            <li>Your template at <code><a#}
+    {#                            href="{{ 'C:/Users/User/PhpstormProjects/blog/templates/front/index.html.twig'|file_link(0) }}">templates/front/index.html.twig</a></code>#}
+    {#            </li>#}
+    {#        </ul>#}
