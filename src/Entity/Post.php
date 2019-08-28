@@ -17,21 +17,25 @@ class Post
     private $id;
 
     /**
+     * @var string
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
-     * @ORM\Column(type="text")
+     * @var string
+     * @ORM\Column(name="content", type="text", nullable=true)
      */
     private $content;
 
     /**
+     * @var \DateTime
      * @ORM\Column(type="datetime")
      */
     private $created_at;
 
     /**
+     * @var User
      * @ORM\ManyToOne(targetEntity="User", inversedBy="Post")
      */
     private $user;
@@ -41,39 +45,67 @@ class Post
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    /**
+     * @return string
+     */
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title): self
+    /**
+     * @param string $title
+     */
+    public function setTitle(string $title): void
     {
         $this->title = $title;
-
-        return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getContent(): ?string
     {
         return $this->content;
     }
 
-    public function setContent(string $content): self
+    /**
+     * @param string $content
+     */
+    public function setContent(string $content): void
     {
         $this->content = $content;
-
-        return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt(): \DateTime
     {
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    /**
+     * @param \DateTime $created_at
+     */
+    public function setCreatedAt(\DateTime $created_at): void
     {
         $this->created_at = $created_at;
+    }
 
-        return $this;
+    /**
+     * @return User
+     */
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function setUser(User $user): void
+    {
+        $this->user = $user;
     }
 }

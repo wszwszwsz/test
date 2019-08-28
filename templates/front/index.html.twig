@@ -21,37 +21,22 @@
         <h1>Hej! Witaj na prostym blogu^^</h1>
         <h2><a href="{{ path('registry') }}">Zarejestruj się</a></h2>
         <h2><a href="{{ path('login') }}">Logowanie</a></h2>
-        <h2><a href="{{ path('write_blog') }}">Napisz se bloga</a></h2>
+        <h2><a href="{{ path('write_blog_page') }}">Napisz se bloga</a></h2>
     </div> <br/> <br/>
-    <div class="example-wrapper">
-        <h2>Blog - Ciężka nauka</h2>
-        Nauka jest jednym z rodzajów wiedzy ludzkiej. Pod względem poznawczym wydaje się być wiedzą najlepszą,
-        najbardziej adekwatnie opisującą rzeczywistość. Ten wysoki status poznawczy zawdzięcza nauka metodom,
-        jakie stosuje, oraz językowi, jakim się posługuje. „Ważnymi elementami «naukowości» są język i metoda.
-        Zdaniem wielu, zarówno naukowców jak i filozofów, to właśnie te dwa elementy decydują o tym, czy coś jest
-        naukowe,
-        czy nie”[1]. Prawa i teorie naukowe, stanowiące najważniejsze wyniki badań naukowych, wymagają uzasadnienia,
-        polegającego
-        na konfrontacji przewidywań na nich opartych z rezultatami doświadczenia, czyli z wynikami obserwacji,
-        pomiarów i eksperymentów.
-        „Nauka rodzi się z dążenia do uzyskania wyjaśnień systematycznych, a równocześnie podlegających kontroli w
-        oparciu o dane (...)”[2].
-        Nauka jako rzeczywistość społeczna jest tworem złożonym i wieloaspektowym.
-    </div>
-    <div class="example-wrapper">
-        <h2>Blog - Ciężkie życie</h2>
-        Życie(gr. βίος, bios) w biologii ma dwie, związane ze sobą definicje:
-        zespół procesów życiowych – swoistych, wysoko zorganizowanych funkcjonalnie (w cykle i sieci), przemian
-        fizycznych
-        i reakcji chemicznych, zachodzących w otwartych termodynamicznie, wyodrębnionych z otoczenia układach fizycznych
-        (zawierających zawsze kwasy nukleinowe i białka, według stanu współczesnej wiedzy), zbudowanych morfologicznie
-        (o hierarchicznej strukturze), składających się z jednej lub wielu komórek (organizmach, osobnikach) oraz
-        swoistych zjawisk biologicznych,
-        zachodzących z udziałem tych organizmów – istniejący na Ziemi, a być może też na innych planetach[1][2]
-        właściwość pewnych układów fizycznych (→ organizmów), w których zachodzą procesy życiowe[3][4][5].
 
+  {% for post in posts %}
+    <div class="example-wrapper">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
     </div>
+{% endfor %}
+
 {% endblock %}
+
+
+
+
+
     {#        <ul>#}
     {#            <li>Your controller at <code><a#}
     {#                            href="{{ 'C:/Users/User/PhpstormProjects/blog/src/Controller/FrontController.php'|file_link(0) }}">src/Controller/FrontController.php</a></code>#}
